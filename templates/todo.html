@@ -37,7 +37,7 @@
                 {% else %}
                 <tr class="pointer alert alert-success">
                     <td>{{loop.index}}</td>
-                    <td class="strike-through-td">{{todo.title}}</td>
+                    <td class="{% if todo.completed %}strike-through-td{% endif %}">{{todo.title}}</td>
                     <td>
                         <button onclick="window.location.href='edit-todo-page/{{todo.id}}'"
                                 type="button" class="btn btn-info">
